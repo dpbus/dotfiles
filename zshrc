@@ -53,3 +53,9 @@ compdef _c c
 h() { cd ~/$1;  }
 _h() { _files -W ~ -/; }
 compdef _h h
+
+# chruby
+if [[ -r '/usr/local/opt/chruby/share/chruby/chruby.sh' ]] ; then
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
+  source /usr/local/opt/chruby/share/chruby/auto.sh
+fi
