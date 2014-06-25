@@ -1,0 +1,6 @@
+[user]
+	name = David Busse
+	email = dpb@essub.com
+
+[push]
+	default = simple
