@@ -1,3 +1,9 @@
-ln -si $PWD/gemrc ~/.gemrc
-ln -si $PWD/gitconfig ~/.gitconfig
-ln -si $PWD/zshrc ~/.zshrc
+FILES="gemrc gitconfig zshrc"
+
+for f in $FILES
+do
+  echo "Symlinking $f to ~/.$f"
+  ln -si "$PWD/$f" "$HOME/.$f"
+done
+
+echo "DONE!"
