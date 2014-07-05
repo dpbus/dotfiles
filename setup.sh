@@ -1,4 +1,4 @@
-FILES="gemrc gitconfig zshrc"
+FILES="gemrc gitconfig vimrc zshrc"
 
 for f in $FILES
 do
