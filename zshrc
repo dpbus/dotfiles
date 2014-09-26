@@ -49,7 +49,7 @@ c() { cd ~/Work/$1;  }
 _c() { _files -W ~/Work -/; }
 compdef _c c
 
-# change to work directory
+# change to home directory
 h() { cd ~/$1;  }
 _h() { _files -W ~ -/; }
 compdef _h h
@@ -58,4 +58,10 @@ compdef _h h
 if [[ -r '/usr/local/opt/chruby/share/chruby/chruby.sh' ]] ; then
   source /usr/local/opt/chruby/share/chruby/chruby.sh
   source /usr/local/opt/chruby/share/chruby/auto.sh
+fi
+
+export PATH=~/bin/:$PATH
+
+if [[ -r '~/.aliases' ]] ; then
+  source ~/.aliases
 fi
