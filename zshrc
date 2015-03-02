@@ -60,7 +60,7 @@ if [[ -r '/usr/local/opt/chruby/share/chruby/chruby.sh' ]] ; then
   source /usr/local/opt/chruby/share/chruby/auto.sh
 fi
 
-export PATH=~/bin/:$PATH
+export PATH=~/bin:$PATH
 
 if [[ -r '~/.aliases' ]] ; then
   source ~/.aliases
