@@ -1,6 +1,16 @@
 [user]
 	name = David Busse
 	email = dpb@essub.com
-
+[color]
+  ui = auto
+[alias]
+  ci = commit
+  co = checkout
+  st = status
+  staged = diff --cached
+  unstaged = diff
 [push]
-	default = simple
+  default = current
+[core]
+  autocrlf = input
+  excludesfile = ~/.gitignore

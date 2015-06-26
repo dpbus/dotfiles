@@ -1,4 +1,4 @@
-FILES="gemrc gitconfig vimrc zshrc"
+FILES="gemrc gitconfig tmux.conf zshrc"
 
 for f in $FILES
 do
