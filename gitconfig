@@ -13,4 +13,5 @@
   default = current
 [core]
   autocrlf = input
+  editor = vim
   excludesfile = ~/.gitignore
