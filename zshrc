@@ -15,6 +15,10 @@ setopt share_history
 # use vi key bindings
 set -o vi
 
+# ctrl-r to search history
+bindkey '^R' history-incremental-search-backward
+bindkey '^R' history-incremental-pattern-search-backward
+
 # ls colors
 autoload colors; colors;
 # export LSCOLORS="Gxfxcxdxbxegedabagacad"
