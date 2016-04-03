@@ -1,6 +1,6 @@
 [user]
-	name = David Busse
-	email = dpb@essub.com
+  name = David Busse
+  email = dpb@essub.com
 [color]
   ui = auto
 [alias]
@@ -9,6 +9,7 @@
   st = status
   staged = diff --cached
   unstaged = diff
+  permission-reset = !git diff -p -R | grep -E \"^(diff|(old|new) mode)\" | git apply
 [push]
   default = current
 [core]
