@@ -136,4 +136,5 @@ fi
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop'
 
-if [ "$TMUX" = "" ]; then exec tmux new-session -A -s main; fi
+type tmux &> /dev/null
+if [[ $? -eq 0 && "$TMUX" = "" ]]; then exec tmux new-session -A -s main; fi
