@@ -1,3 +1,4 @@
+PATH="$PATH:~/Projects/bin/"
 setopt prompt_subst
 autoload -U colors && colors # Enable colors in prompt
 
@@ -91,6 +92,7 @@ ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -G
 
 alias la='ls -lah'
 alias ll='ls -lh'
+alias tree='tree -C'
 alias be='bundle exec'
 
 # ignore pasted in prompts
@@ -115,8 +117,8 @@ zstyle ':completion:*:warnings' format 'No matches for: %d'
 zstyle ':completion:*' group-name ''
 
 # change to work directory
-c() { cd ~/Work/$1;  }
-_c() { _files -W ~/Work -/; }
+c() { cd ~/Projects/$1;  }
+_c() { _files -W ~/Projects -/; }
 compdef _c c
 
 # change to home directory
@@ -130,8 +132,8 @@ if [[ -r '/usr/local/opt/chruby/share/chruby/chruby.sh' ]] ; then
   source /usr/local/opt/chruby/share/chruby/auto.sh
 fi
 
-export PATH=~/bin:$PATH
-
 # shortcuts for starting and stopping postgres
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop'
+
+if [ "$TMUX" = "" ]; then exec tmux new-session -A -s main; fi
