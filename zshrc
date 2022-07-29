@@ -88,8 +88,7 @@ bindkey '^R' history-incremental-pattern-search-backward
 # ls colors
 autoload colors; colors;
 # export LSCOLORS="Gxfxcxdxbxegedabagacad"
-ls --color -d . &>/dev/null 2>&1 && alias ls='ls --color=tty' || alias ls='ls -G'
-
+alias ls='ls -G'
 alias la='ls -lah'
 alias ll='ls -lh'
 alias tree='tree -C'
