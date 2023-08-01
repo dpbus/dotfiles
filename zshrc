@@ -126,9 +126,9 @@ _h() { _files -W ~ -/; }
 compdef _h h
 
 # chruby
-if [[ -r '/usr/local/opt/chruby/share/chruby/chruby.sh' ]] ; then
-  source /usr/local/opt/chruby/share/chruby/chruby.sh
-  source /usr/local/opt/chruby/share/chruby/auto.sh
+if [[ -r '/opt/homebrew/opt/chruby/share/chruby/chruby.sh' ]] ; then
+  source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 fi
 
 # shortcuts for starting and stopping postgres
@@ -137,3 +137,6 @@ alias pg_stop='pg_ctl -D /usr/local/var/postgres stop'
 
 type tmux &> /dev/null
 if [[ $? -eq 0 && "$TMUX" = "" ]]; then exec tmux new-session -A -s main; fi
+
+# Created by `pipx` on 2023-01-26 02:57:09
+export PATH="$PATH:/Users/dpb/.local/bin"
