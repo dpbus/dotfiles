@@ -8,4 +8,12 @@ done
 
 git clone https://github.com/braintreeps/vim_dotfiles.git ~/.vim
 
+echo "Cloning github repos to ~/Projects/"
+cd ~/Projects
+PAGE=1
+curl "https://api.github.com/users/dpbus/repos?page=$PAGE&per_page=100" |
+  grep -e 'ssh_url*' |
+  cut -d \" -f 4 |
+  xargs -L1 git clone
+
 echo "DONE!"
