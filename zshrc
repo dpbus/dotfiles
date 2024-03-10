@@ -1,4 +1,11 @@
-PATH="$PATH:~/Projects/bin/"
+typeset -U path PATH
+
+export GOPATH=$HOME/Projects/go
+path+=($HOME/Projects/bin)
+path+=($HOME/local/bin)
+path+=($GOPATH/bin)
+export PATH
+
 setopt prompt_subst
 autoload -U colors && colors # Enable colors in prompt
 
@@ -125,6 +132,11 @@ h() { cd ~/$1;  }
 _h() { _files -W ~ -/; }
 compdef _h h
 
+# change to go work directory
+cg() { cd ~/Projects/go/src/github.com/dpbus/$1;  }
+_cg() { _files -W ~/Projects/go/src/github.com/dpbus -/; }
+compdef _cg cg
+
 # chruby
 if [[ -r '/opt/homebrew/opt/chruby/share/chruby/chruby.sh' ]] ; then
   source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
@@ -135,8 +147,5 @@ fi
 alias pg_start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pg_stop='pg_ctl -D /usr/local/var/postgres stop'
 
-type tmux &> /dev/null
-if [[ $? -eq 0 && "$TMUX" = "" ]]; then exec tmux new-session -A -s main; fi
-
-# Created by `pipx` on 2023-01-26 02:57:09
-export PATH="$PATH:/Users/dpb/.local/bin"
+#type tmux &> /dev/null
+#if [[ $? -eq 0 && "$TMUX" = "" ]]; then exec tmux new-session -A -s main; fi
