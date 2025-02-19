@@ -149,4 +149,5 @@ alias pg_stop='pg_ctl -D /usr/local/var/postgres stop'
 
 #type tmux &> /dev/null
 #if [[ $? -eq 0 && "$TMUX" = "" ]]; then exec tmux new-session -A -s main; fi
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/libpq/lib/pkgconfig"

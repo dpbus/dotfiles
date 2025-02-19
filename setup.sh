@@ -6,6 +6,9 @@ do
   ln -si "$PWD/$f" "$HOME/.$f"
 done
 
+echo "Symlinking ghostty to ~/.config/"
+ln -si "$PWD/ghostty" "$HOME/.config"
+
 git clone https://github.com/braintreeps/vim_dotfiles.git ~/.vim
 
 echo "Cloning github repos to ~/Projects/"

@@ -1,0 +1,22 @@
+quit-after-last-window-closed = true
+
+theme = "Custom"
+background-opacity = 0.97
+background = 0A0F14
+foreground = F4F4F4
+
+shell-integration-features = no-cursor
+cursor-color = 6c6c6c
+cursor-style-blink = false
+cursor-style = block
+
+font-family = "SF Mono"
+font-size = 12
+font-family-bold = "SF Mono Bold"
+font-family-italic = "SF Mono Regular Italic"
+font-family-bold-italic = "SF Mono Bold Italic"
+font-thicken = true
+
+window-height = 81
+window-width = 247
+window-padding-x = 5
