@@ -7,7 +7,8 @@ do
 done
 
 echo "Symlinking ghostty to ~/.config/"
-ln -si "$PWD/ghostty" "$HOME/.config"
+mkdir -p "$HOME/.config"
+ln -si "$PWD/ghostty" "$HOME/.config/ghostty"
 
 git clone https://github.com/braintreeps/vim_dotfiles.git ~/.vim
 
