@@ -10,11 +10,11 @@ cursor-color = 6c6c6c
 cursor-style-blink = false
 cursor-style = block
 
-font-family = "SF Mono"
+font-family = "SF Mono Terminal"
 font-size = 12
-font-family-bold = "SF Mono Bold"
-font-family-italic = "SF Mono Regular Italic"
-font-family-bold-italic = "SF Mono Bold Italic"
+font-family-bold = "SF Mono Terminal Bold"
+font-family-italic = "SF Mono Terminal Regular Italic"
+font-family-bold-italic = "SF Mono Terminal Bold Italic"
 font-thicken = true
 
 window-height = 81
