@@ -10,3 +10,4 @@ set ruler
 syntax on
 
 let g:NERDTreeNodeDelimiter = "\u00a0"
+let g:copilot_filetypes = {'*': v:false}

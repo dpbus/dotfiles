@@ -1,0 +1,2 @@
+let g:loaded_copilot = 1
+let g:loaded_copilot_chat = 1
