@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# vim
+*.swp
+*.swo
+*~
+tags
+TAGS
+
+# AI tools
+.claude/
+CLAUDE.local.md
+.aider*
+.cursor/
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
