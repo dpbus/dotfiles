@@ -16,6 +16,11 @@ let g:sonokai_disable_italic_comment = 1
 let g:sonokai_transparent_background = 1
 let g:sonokai_float_style = 'blend'
 
+augroup sonokai_override
+  autocmd!
+  autocmd ColorScheme sonokai hi Comment guifg=#8a847a
+  autocmd ColorScheme sonokai hi SpecialComment guifg=#8a847a
+augroup END
 colorscheme sonokai
 
 set ruler
